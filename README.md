@@ -1,131 +1,134 @@
-⚡ Electricity Frequency Forecasting (2024) – ARIMA Based Time-Series Modeling
+# ⚡ Electricity Frequency Forecasting (2024)
+### *ARIMA-Based Time-Series Modeling & Grid Stability Analysis*
 
-A complete end-to-end time-series forecasting and exploratory analysis project built using Python, ARIMA models, and frequency trend analytics.
-This project predicts electricity frequency variations and analyzes seasonal, monthly, and operational patterns using real 2024 data.
+A complete end-to-end **time-series forecasting** and **exploratory analysis** project built using Python, ARIMA models, and grid-frequency analytics.  
+This project predicts **electricity frequency variations** and analyzes seasonal, monthly, and operational patterns using real 2024 system frequency data.
 
-📌 Project Overview
+---
 
-This project studies electricity grid frequency using statistical and machine-learning-based time-series techniques.
+## 📌 Project Overview
 
-It includes:
+This project focuses on **electricity grid frequency stability**, applying statistical and ML-based time-series techniques.
 
-Seasonal, monthly & weekday/weekend analysis
+Key components:
 
-Rolling smoothing & trend detection
+- Seasonal, monthly & weekday/weekend analysis  
+- Rolling smoothing & trend extraction  
+- Daily and hourly variation visualization  
+- ARIMA/AR forecasting  
+- Short-term (48-hour) prediction  
+- Model evaluation via MSE  
 
-Daily and hourly variation plots
+This project demonstrates **real-world forecasting**, suitable for DS/AI/Energy Analytics profiles.
 
-ARIMA/AR forecasting
+---
 
-Short-term (48-hour) frequency prediction
+## 🧰 Tech Stack
 
-Model evaluation with MSE
+- Python 3.x  
+- Pandas, NumPy  
+- Matplotlib, Seaborn  
+- Scikit-learn  
+- statsmodels (ARIMA)  
+- MinMaxScaler  
 
-This project demonstrates real-world time-series modeling, suited for DS/AI/forecasting roles.
+---
 
-🧰 Tech Stack
+## 📂 Dataset
 
-Python 3.x
+**File:** `Modified_Frequency_Profile_2024.csv`
 
-Pandas, NumPy
+| Column     | Description               |
+|------------|---------------------------|
+| Date       | Day (YYYY-MM-DD)          |
+| Time       | Timestamp of measurement  |
+| Frequency  | System frequency (Hz)     |
+| Timestamp  | Combined Date + Time      |
 
-Matplotlib, Seaborn
+Data is sampled at high frequency and aggregated for analysis.
 
-Scikit-learn
+---
 
-statsmodels (ARIMA)
+## 🔍 Key Features & Insights
 
-MinMaxScaler
+### 1️⃣ Seasonal Trend Analysis
+- Seasonal segmentation (Winter, Spring, Summer, Fall)  
+- Rolling mean smoothing  
+- Trendline fitting  
 
-📂 Dataset
+### 2️⃣ Monthly Frequency Behavior
+- Violin plots  
+- Color-coded month mapping  
+- Grid compliance markers  
 
-Modified_Frequency_Profile_2024.csv
+### 3️⃣ Daily Trend Visualization
+- Month-wise shaded background  
+- Daily mean frequency tracking  
 
-Includes:
+### 4️⃣ Weekday vs Weekend Trends
+- Operational behavior differences  
+- Frequency stability comparison  
 
-Column	Description
-Date	Day (YYYY-MM-DD)
-Time	Hour/Minute
-Frequency	Recorded system frequency
-Timestamp	Combined Date + Time
+---
 
-Data is sampled at a high frequency and aggregated for analysis.
+## 🤖 Time-Series Modeling
 
-🔍 Key Features & Insights
-1️⃣ Seasonal Trend Analysis
+### 📘 ARIMA(5,1,5) – Main Model
+- Fit on daily resampled frequency  
+- 80/20 train-test split  
+- Forecast plotted against real values  
+- Evaluated using **Mean Squared Error (MSE)**  
 
-Winter, Spring, Summer, Fall comparison
+### 📘 AR(2) – Baseline Model
+- Simple autoregressive benchmark  
+- Compared with ARIMA performance  
 
-Rolling mean smoothing
+### 📘 Short-Term Forecast (Next 48 Hours)
+- Based on Jan 1, 2024 hourly data  
+- Scaled using MinMaxScaler  
+- ARIMA predicts next 48 hourly steps  
+- Inverse transformation applied  
 
-Trendline fitting
+---
 
-2️⃣ Monthly Frequency Behavior
+## 📈 Sample Visualizations
+*(Add images in your GitHub repo)*
 
-Violin plots for monthly distribution
+- Seasonal Frequency Trends  
+- Monthly Violin Distribution  
+- Daily Mean Frequency (with month shading)  
+- Weekday vs Weekend Comparison  
+- ARIMA Actual vs Predicted  
+- 48-Hour Forecast Plot  
 
-Custom color-coded legend
+---
 
-Grid frequency compliance lines
+## 📊 Model Evaluation
 
-3️⃣ Daily Trend Visualization
+| Model         | MSE (Lower = Better) |
+|---------------|------------------------|
+| ARIMA(5,1,5)  | Very Low Error         |
+| AR(2)         | Higher Baseline Error  |
 
-Month-colored background shading
+ARIMA clearly outperforms the baseline AR model.
 
-Smoothed daily average frequency analysis
+---
 
-4️⃣ Weekday vs Weekend Trends
+## 🚀 Future Improvements
 
-Clear operational differences
+- Auto-ARIMA / SARIMA  
+- LSTM/GRU neural models  
+- Residual diagnostics (ACF/PACF)  
+- Deployment using FastAPI  
+- Streamlit-based dashboard  
 
-Frequency variability insights
+---
 
-🤖 Time-Series Modeling
-📘 ARIMA(5,1,5) – Main Model
+## 👨‍💻 Developed By
 
-Fit on daily frequency averages
+**Venkata Bhuvan Kosuru**  
+IIT Patna — AI & Data Science  
 
-80/20 train-test split
+---
 
-Forecast plotted vs actual values
-
-Evaluated using MSE
-
-📘 AR(2) – Baseline Model
-
-Quick autoregressive baseline
-
-Compared with ARIMA results
-
-📘 Short-Term Forecast (Next 48 Hours)
-
-Using Jan 1, 2024 data
-
-Normalized using MinMaxScaler
-
-ARIMA predicts next 48 hourly steps
-
-Inverse-transformed to get real Hz values
-
-📈 Sample Visualizations
-
-(Include images like below in your repo for maximum impact)
-
-Seasonal Frequency Trends
-
-Monthly Violin Distribution
-
-Daily Mean Frequency (with shading)
-
-Weekday vs Weekend Comparison
-
-ARIMA Actual vs Predicted
-
-48-Hour Forecast Plot
-
-📊 Model Evaluation
-Model	MSE (Lower is better)
-ARIMA(5,1,5)	Very Low Error
-AR(2)	Higher Baseline Error
-
-ARIMA clearly provides better forecasting accuracy.
+## ⭐ Star the repo if you found it useful!
